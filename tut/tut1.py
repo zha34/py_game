@@ -2,12 +2,13 @@ import sys, pygame
 pygame.init()
 
 size = width, height = 320, 240
-speed = [1, 0.5]
+factor = 0.5
+speed = [1*factor, 1*factor]
 black = 0, 0, 0
 
 screen = pygame.display.set_mode(size)
 
-ball = pygame.image.load("intro_ball.gif")
+ball = pygame.image.load("zha5.gif")
 ballrect = ball.get_rect()
 
 while 1:

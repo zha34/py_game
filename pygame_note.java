@@ -7,6 +7,10 @@ https://github.com/pygame/pygame/tree/master/examples
 
 
 // tut
+
+https://www.jianshu.com/p/cb146af64f05
+
+
 https://dr0id.bitbucket.io/legacy/pygame_tutorials.html
 
 
