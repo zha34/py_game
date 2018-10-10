@@ -2,7 +2,7 @@ import sys, pygame
 pygame.init()
 
 size = width, height = 320, 240
-factor = 0.5
+factor = 1
 speed = [1*factor, 1*factor]
 black = 0, 0, 0
 
