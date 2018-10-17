@@ -29,6 +29,17 @@ python3 -m pygame.examples.aliens
 [main field]
 
 
+init()
+quit()
+load() // img
+pygame.Rect() // left, top, width, height
+clock.tick(fps) // fix 60 fps
+
+pygame.display.set_mode(size)
+pygame.display.update() //刷新屏幕内容显示，稍后使用
+pygame.display.flip()
+
+
 
 
 Surface obj 
@@ -45,12 +56,13 @@ Rect obj
 	0,10	10,10
 
 pygame.display.set_mode() //初始化游戏显示窗口
-pygame.display.update() //刷新屏幕内容显示，稍后使用
 set_mode 
 	set_mode(resolution=(0,0),flags=0,depth=0)->Surface
 
+pygame.display.update() //刷新屏幕内容显示，稍后使用
+
 // draw the whole screen
- pygame.display.flip()
+pygame.display.flip()
 
 
 

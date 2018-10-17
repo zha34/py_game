@@ -11,34 +11,53 @@ import sys, pygame
 pygame.init()
 
 size = width, height = 512, 512
-speed = [2, 2]
+speed = [4, 1]
 black = 0, 0, 0
 gray = 50, 50, 50
 stat = 1
 
 screen = pygame.display.set_mode(size)
 
-ball = pygame.image.load("intro_ball.gif")
-ballrect = ball.get_rect()
+ball = pygame.image.load("./img/zha5.gif")
+bg = pygame.image.load("./img/bg.png")
+ballrect = pygame.Rect(256,256,128,128)
 
-while 1:
+
+clock = pygame.time.Clock()
+
+
+# mouse_rect = pygame.
+
+while 1: 
+    clock.tick(60)
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
 
-    # ballrect = ballrect.move(speed)
-    # if ballrect.left < 0 or ballrect.right > width:
-    #     speed[0] = -speed[0]
-    # if ballrect.top < 0 or ballrect.bottom > height:
-    #     speed[1] = -speed[1]
+    # draw bg
+    screen.blit(bg, (0,0) )
 
-    if stat == 1: 
-    	screen.fill(black)
-    	stat *= -1
-    else:
-    	screen.fill(gray)
-    	stat *= -1
-    	
-    	
 
-    # screen.blit(ball, ballrect)
+    ballrect = ballrect.move(speed)
+    if ballrect.left < 0 or ballrect.right > width:
+        speed[0] = -speed[0]
+    if ballrect.top < 0 or ballrect.bottom > height:
+        speed[1] = -speed[1] 
+
+
+
+
+    screen.blit(ball, ballrect)
+
+
+
+
     pygame.display.flip()
+
+
+
+
+
+
+
+
+
